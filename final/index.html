@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Menu</title>
+    <link rel="stylesheet" href="style_var.css">
+</head>
+<body>
+    <div id="menu" class="menu">
+        <!-- Desserts Section -->
+        <div class="menu-section">
+            <h1>Desserts</h1>
+            <div class="grid-container">
+                <!-- Product cards will be injected here dynamically -->
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+         <div class="cart">
+        <div class="cart-section">
+            <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+            <div class="listCart">
+                <p>No items in the cart</p>
+            </div>
+            <button id="confirm-order-btn" hidden>Confirm Order</button>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Order Confirmed</h2>
+            <p>We hope you enjoy your food!</p>
+            <div id="order-summary"></div>
+            <button id="new-order-btn">Start New Order</button>
+        </div>
+    </div>
+</div>
+    <script src="be3.js"></script>
+</body>
+</html>

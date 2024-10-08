@@ -1,0 +1,353 @@
+/* Root variables for global styles */
+:root {
+    --primary-color: #ff7f50; /* Main color (orange) */
+    --secondary-color: #f5f5f5; /* Light grey for backgrounds */
+    --text-color-dark: #333; /* Dark text color for readability */
+    --text-color-light: #fff; /* Light text color for contrast */
+    --border-color: #e0e0e0; /* Light border color for subtle outlines */
+    --font-family: 'Arial', sans-serif; /* Global font family */
+    --heading-font-size: 2em; /* Font size for main headings */
+    --subheading-font-size: 1.2em; /* Font size for subheadings */
+    --body-font-size: 1em; /* Standard body text size */
+    --card-font-size: 1.1em; /* Font size for card content */
+}
+
+/* Menu container styles */
+#menu {
+    display: flex; /* Arrange items horizontally */
+    justify-content: space-between; /* Space out items evenly */
+    padding: 20px; /* Add space around the menu */
+    gap: 5px; /* Small gap between items */
+    font-family: var(--font-family); /* Use global font */
+}
+
+/* Overall menu container */
+.menu-container {
+    padding: 20px; /* Add padding around content */
+    font-family: var(--font-family); /* Use global font */
+}
+
+/* Main heading style */
+h1 {
+    font-size: var(--heading-font-size); /* Use heading font size */
+    margin-bottom: 20px; /* Space below the heading */
+    font-family: var(--font-family); /* Use global font */
+}
+
+/* Grid layout for product cards */
+.grid-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Three columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual product card styles */
+.card {
+    background-color: var(--text-color-light); /* White background */
+    border: 1px solid var(--border-color); /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner padding */
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space items evenly */
+    text-align: left; /* Align text to the left */
+    font-family: var(--font-family); /* Use global font */
+}
+
+/* Product image styles */
+.card-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded image corners */
+}
+
+/* Product name heading */
+.card h2 {
+    font-size: var(--subheading-font-size); /* Use subheading size */
+    margin: 10px 0; /* Space above and below */
+}
+
+/* Product price */
+.card p {
+    color: var(--primary-color); /* Use primary color */
+    font-size: var(--card-font-size); /* Use card font size */
+    margin: 5px 0; /* Space above and below */
+}
+
+/* Product category */
+.card h3 {
+    color: var(--text-color-dark); /* Dark text color */
+    font-size: var(--card-font-size); /* Use card font size */
+    margin: 5px; /* Space around */
+}
+
+/* Style for the "Add to Cart" button */
+.add-to-cart-button {
+    background-color: var(--secondary-color); /* Light grey background */
+    border: 3px solid var(--primary-color); /* Bold orange border */
+    color: var(--text-color-dark); /* Dark text color */
+    font-size: 13px; /* Smaller font size */
+    padding: 15px; /* Space inside the button */
+    border-radius: 20px; /* Rounded button */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Center contents */
+    align-items: center; /* Center vertically */
+    width: 160px; /* Fixed width */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    margin: 10px auto; /* Center horizontally */
+}
+
+/* Hover effect for "Add to Cart" button */
+.add-to-cart-button:hover {
+    background-color: var(--primary-color); /* Change to orange on hover */
+    color: var(--text-color-light); /* Light text color */
+}
+
+/* Quantity selector container (hidden by default) */
+.quantity-selector {
+    display: none; /* Hidden initially */
+    justify-content: center; /* Center contents */
+    align-items: center; /* Center vertically */
+    margin: 10px auto; /* Center horizontally */
+    width: 160px; /* Fixed width */
+}
+
+/* Show quantity selector when not hidden */
+.quantity-selector.visible {
+    display: flex; /* Display as flex when visible */
+}
+
+/* Style for minus and plus buttons in quantity selector */
+.quantity-selector button {
+    background-color: var(--secondary-color); /* Light grey background */
+    border: 1px solid var(--border-color); /* Light border */
+    color: var(--text-color-dark); /* Dark text color */
+    font-size: 16px; /* Font size */
+    padding: 5px 10px; /* Padding inside buttons */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Quantity number display */
+.quantity-selector .quantity {
+    margin: 0 10px; /* Space between buttons */
+    font-size: 16px; /* Font size */
+}
+
+/* Style for cart items in the cart list */
+.cart-item {
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    padding: 10px; /* Padding inside cart item */
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+}
+
+/* Inner view of cart item */
+.cart-item .cartView {
+    width: 100%; /* Full width */
+}
+
+/* Rows within cart item */
+.row {
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+}
+
+/* Style for the remove item icon */
+.remove-item-icon {
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hidden class to hide elements */
+.hidden {
+    display: none; /* Do not display the element */
+}
+
+/* Cart section container */
+.cart-section {
+    margin-bottom: 10px; /* Space below cart */
+    margin-top: 20px; /* Space above cart */
+    width: 300px; /* Fixed width for cart */
+    background-color: var(--text-color-light); /* White background */
+    border: 1px solid var(--border-color); /* Light border */
+    padding: 15px; /* Padding inside cart */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Cart section title */
+.cart-section h2 {
+    font-size: var(--subheading-font-size); /* Subheading size */
+    margin-bottom: 15px; /* Space below title */
+}
+
+/* Cart total display */
+.cart-total {
+    font-size: 1.2em; /* Slightly larger font */
+    font-weight: bold; /* Bold text */
+    text-align: right; /* Align text to the right */
+    margin-top: 20px; /* Space above total */
+}
+
+/* Button to confirm the order */
+button#confirm-order-btn {
+    background-color: var(--primary-color); /* Orange background */
+    color: var(--text-color-light); /* White text */
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded button */
+    width: 100%; /* Full width of container */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Standard font size */
+    margin-top: 20px; /* Space above button */
+}
+
+/* Hover effect for confirm order button */
+button#confirm-order-btn:hover {
+    background-color: darkorange; /* Darker orange on hover */
+}
+
+/* Modal overlay for order confirmation */
+#order-confirmation-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position over entire screen */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    z-index: 1000; /* On top of other elements */
+}
+
+/* Show the modal when it has the 'visible' class */
+#order-confirmation-modal.visible {
+    display: flex; /* Use flex layout */
+}
+
+/* Modal content container */
+#order-summary {
+    background-color: white; /* White background */
+    padding: 20px; /* Padding inside modal */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 400px; /* Max width for modal */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text inside modal */
+}
+
+/* Style for each order summary item */
+#order-summary p {
+    margin: 10px 0; /* Space above and below each item */
+}
+
+/* Button to start a new order */
+#new-order-btn {
+    margin-top: 20px; /* Space above button */
+    padding: 10px 20px; /* Padding inside button */
+    background-color: var(--primary-color); /* Orange background */
+    color: var(--text-color-light); /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for new order button */
+#new-order-btn:hover {
+    background-color: darkorange; /* Darker orange on hover */
+}
+
+/* Additional styles for the cart icon and count */
+#cart-count {
+    background-color: var(--primary-color); /* Orange background */
+    color: var(--text-color-light); /* White text */
+    padding: 5px 10px; /* Padding inside count */
+    border-radius: 50%; /* Circular shape */
+    font-weight: bold; /* Bold text */
+    position: absolute; /* Position relative to parent */
+    top: 10px; /* Position from top */
+    right: 10px; /* Position from right */
+}
+
+/* Adjustments to ensure only one button is visible at a time */
+.card .add-to-cart-button.hidden {
+    display: none; /* Hide when 'hidden' class is applied */
+}
+
+.card .quantity-selector.hidden {
+    display: none; /* Hide when 'hidden' class is applied */
+}
+
+/* Ensure quantity selector is displayed correctly when visible */
+.card .quantity-selector {
+    display: flex; /* Flex layout */
+}
+.quantity-selector{
+    background-color: var(--secondary-color); /* Light grey background */
+    border: 3px solid var(--primary-color); /* Bold orange border */
+    color: var(--text-color-dark); /* Dark text color */
+    font-size: 13px; /* Smaller font size */
+    padding: 7px; /* Space inside the button */
+    border-radius: 20px;
+
+
+}
+/* Style for the plus and minus buttons inside quantity selector */
+.quantity-selector .minus-button,
+.quantity-selector .plus-button {
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+    font-size: 20px; /* Larger font size */
+    background-color: var(--secondary-color); /* Light grey background */
+    border: 1px solid var(--border-color); /* Light border */
+    border-radius: 20px; /* Circular buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border:solid 2px var(--primary-color);
+}
+
+/* Style for quantity display */
+.quantity-selector .quantity {
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    margin: 0 15px; /* Space on sides */
+}
+
+/* Adjust the modal content for better appearance */
+#order-summary {
+    background-color: var(--text-color-light); /* White background */
+    padding: 30px; /* More padding for spacious feel */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow for depth */
+}
+
+/* Style for the headings inside the modal */
+#order-summary h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Style for total price inside the modal */
+#order-summary .order-total {
+    font-size: 1.2em; /* Slightly larger font */
+    font-weight: bold; /* Bold text */
+    margin-top: 20px; /* Space above total */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Adjust grid layout on smaller screens */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust grid layout on very small screens */
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
